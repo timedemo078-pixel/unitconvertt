@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: UnitConvert 2 seo ver",
+  "description": "Professional, engineering-grade unit converter platform calibrated against NIST standards, featuring high precision calculations, omni-search, and offline-first performance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

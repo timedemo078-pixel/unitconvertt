@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1216" />
+      <stop offset="100%" stop-color="#090B0D" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17D7C8" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+  </defs>
+  <!-- Background Container -->
+  <rect width="128" height="128" rx="32" fill="url(#bgGrad)" stroke="#232A34" stroke-width="4"/>
+  
+  <!-- Scale Pillar -->
+  <path d="M64 32v64M44 96h40" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Balanced Beam -->
+  <path d="M28 48h72" stroke="url(#tealGrad)" stroke-width="8" stroke-linecap="round" />
+  
+  <!-- Left side pan -->
+  <path d="M28 48l-12 30h24z" fill="none" stroke="url(#tealGrad)" stroke-width="6" stroke-linejoin="round" />
+  
+  <!-- Right side pan -->
+  <path d="M100 48l-12 30h24z" fill="none" stroke="url(#tealGrad)" stroke-width="6" stroke-linejoin="round" />
+</svg>

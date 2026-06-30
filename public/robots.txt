@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Specialized instructions for LLM and Web-Search AI systems
+User-agent: ChatGPTUser
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://unitconvert.com/sitemap.xml

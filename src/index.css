@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --canvas-bg: #f8fafc; /* light slate-50 */
+  --card-bg: #ffffff; /* light white */
+  --panel-bg: #f1f5f9; /* light slate-100 */
+  --border-main: #cbd5e1; /* slate-300 light mode border */
+  --navbar-bg: #ffffff; /* light navbar */
+  --accent-teal: #0d9488; /* teal-600 */
+  --accent-teal-hover: #0f766e; /* teal-700 */
+  --accent-bg: #f0fdfa; /* light teal-50 */
+  --accent-border: #99f6e4; /* light teal-200 */
+  --text-primary: #0f172a; /* dark slate-900 */
+  --text-secondary: #475569; /* slate-600 */
+  --text-muted: #64748b; /* slate-500 */
+  --hover-bg: #f1f5f9; /* slate-100 */
+  --kbd-bg: #f1f5f9;
+  --kbd-border: #cbd5e1;
+}
+
+.dark {
+  --canvas-bg: #090B0D; /* dark background */
+  --card-bg: #11161C; /* dark card */
+  --panel-bg: #090B0D; /* dark canvas inner */
+  --border-main: #232A34; /* dark gray border */
+  --navbar-bg: #0F1216; /* dark navbar */
+  --accent-teal: #17D7C8; /* glowing teal */
+  --accent-teal-hover: #14b8aa; /* soft teal */
+  --accent-bg: #13262A; /* dark teal-tinted background */
+  --accent-border: rgba(23, 215, 200, 0.2); /* semi-transparent teal border */
+  --text-primary: #ffffff; /* pure white text */
+  --text-secondary: #98A3B3; /* light-gray text */
+  --text-muted: #697487; /* dark-gray text */
+  --hover-bg: #182029; /* dark gray hover */
+  --kbd-bg: #090B0D;
+  --kbd-border: #232A34;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Map standard theme colors to dynamic CSS variables */
+  --color-canvas-bg: var(--canvas-bg);
+  --color-card-bg: var(--card-bg);
+  --color-panel-bg: var(--panel-bg);
+  --color-border-main: var(--border-main);
+  --color-navbar-bg: var(--navbar-bg);
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-teal-hover: var(--accent-teal-hover);
+  --color-accent-bg: var(--accent-bg);
+  --color-accent-border: var(--accent-border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-hover-bg: var(--hover-bg);
+  --color-kbd-bg: var(--kbd-bg);
+  --color-kbd-border: var(--kbd-border);
+  
+  /* Custom palette colors fallback */
+  --color-canvas-dark: #090B0D;
+  --color-card-dark: #11161C;
+}
+
+@layer base {
+  body {
+    @apply font-sans transition-colors duration-200 antialiased bg-canvas-bg text-text-primary;
+  }
+}
+
+/* Custom scrollbars for the search overlay list */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.45);
+}
