@@ -21,6 +21,7 @@ export default function Navbar({ currentView, onNavigate, onOpenSearch, onOpenGu
 
   const navItems = [
     { view: "home" as AppView, label: "Dashboard", icon: <Scale className="w-3.5 h-3.5" /> },
+    { view: "learn" as AppView, label: "Guides", icon: <BookOpen className="w-3.5 h-3.5" /> },
     { view: "about" as AppView, label: "Standards", icon: <BookOpen className="w-3.5 h-3.5" /> },
     { view: "disclaimer" as AppView, label: "Disclaimer", icon: <Shield className="w-3.5 h-3.5" /> },
     { view: "privacy" as AppView, label: "Privacy", icon: <Shield className="w-3.5 h-3.5" /> },

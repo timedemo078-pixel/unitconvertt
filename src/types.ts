@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type AppView = "home" | "about" | "disclaimer" | "privacy";
+export type AppView = "home" | "about" | "disclaimer" | "privacy" | "learn";
 
 export interface RecentConverter {
   id: string; // unique ID

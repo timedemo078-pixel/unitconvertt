@@ -319,6 +319,29 @@ export default function ConverterPanel({
               </div>
             </div>
 
+            {/* Scientific Heritage & Conversion Pitfalls Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="p-5 rounded-2xl border border-border-main/50 bg-canvas-bg space-y-3">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-accent-teal flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-accent-teal" />
+                  <span>Scientific Heritage & Metrology History</span>
+                </h4>
+                <p className="text-xs text-text-secondary leading-relaxed">
+                  {glossary.historyContext}
+                </p>
+              </div>
+
+              <div className="p-5 rounded-2xl border border-border-main/50 bg-canvas-bg space-y-3">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-accent-teal flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-accent-teal" />
+                  <span>Common Conversion Mistakes & Pitfalls</span>
+                </h4>
+                <p className="text-xs text-text-secondary leading-relaxed">
+                  {glossary.commonMistakes}
+                </p>
+              </div>
+            </div>
+
             {/* 2. Step-by-Step Worked Conversion Example */}
             <div className="p-6 rounded-2xl border border-border-main/50 bg-canvas-bg space-y-4">
               <h4 className="text-xs font-bold uppercase tracking-wider text-text-primary flex items-center gap-2">

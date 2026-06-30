@@ -67,8 +67,10 @@ import BaseConverterPanel from "./components/BaseConverterPanel";
 import AboutView from "./components/AboutView";
 import DisclaimerView from "./components/DisclaimerView";
 import PrivacyView from "./components/PrivacyView";
+import LearnView from "./components/LearnView";
 import SeoEngine from "./components/SeoEngine";
 import HomeDashboard from "./components/HomeDashboard";
+import { AppView } from "./types";
 
 // Custom Link Component for flawless, hard-refresh-free client navigation
 export function Link({
@@ -104,7 +106,7 @@ interface RouteState {
 }
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<"home" | "about" | "disclaimer" | "privacy">("home");
+  const [currentView, setCurrentView] = useState<AppView>("home");
   const [route, setRoute] = useState<RouteState>({ type: "home" });
 
   // Overlays State
@@ -180,7 +182,18 @@ export default function App() {
       }
       const parsed = parseRoute();
       setRoute(parsed);
-      setCurrentView("home"); // The custom sections are routed within main layout
+      const path = window.location.pathname;
+      if (path === "/about") {
+        setCurrentView("about");
+      } else if (path === "/disclaimer") {
+        setCurrentView("disclaimer");
+      } else if (path === "/privacy") {
+        setCurrentView("privacy");
+      } else if (path === "/learn") {
+        setCurrentView("learn");
+      } else {
+        setCurrentView("home");
+      }
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -429,6 +442,7 @@ export default function App() {
               {currentView === "about" && <AboutView />}
               {currentView === "disclaimer" && <DisclaimerView />}
               {currentView === "privacy" && <PrivacyView />}
+              {currentView === "learn" && <LearnView />}
             </motion.div>
           ) : (
             <motion.div

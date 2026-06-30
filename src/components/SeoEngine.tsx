@@ -16,7 +16,7 @@ interface RouteState {
 
 interface SeoEngineProps {
   route: RouteState;
-  currentView: "home" | "about" | "disclaimer" | "privacy";
+  currentView: "home" | "about" | "disclaimer" | "privacy" | "learn";
 }
 
 export default function SeoEngine({ route, currentView }: SeoEngineProps) {
@@ -32,11 +32,15 @@ export default function SeoEngine({ route, currentView }: SeoEngineProps) {
     const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
     if (currentView !== "home") {
-      // Dynamic Static Views (About, Disclaimer, Privacy)
+      // Dynamic Static Views (About, Disclaimer, Privacy, Learn)
       if (currentView === "about") {
         title = "Metrology & Physical Conversion Standards | UnitConvert";
         description = "Learn about the international scientific standards, SI units, and NIST calibration guidelines behind UnitConvert's double-precision calculation engine.";
         path = "/about";
+      } else if (currentView === "learn") {
+        title = "Metrology Learn & Research Hub | UnitConvert Guides";
+        description = "Read expert articles on SI redefinitions, float precision rounding errors, affine temperature math, and scientific measurement histories.";
+        path = "/learn";
       } else if (currentView === "disclaimer") {
         title = "Legal Disclaimer & Engineering Tolerances | UnitConvert";
         description = "Review the engineering guidelines, roundoff limits, and liability terms governing the unit conversion estimations on UnitConvert.";
